@@ -29,7 +29,7 @@ def handleClient(connectionSocket):
     except IOError:
         connectionSocket.send(b"HTTP/1.1 404 Not Found\r\n")
         connectionSocket.send(b"Content-Type: text/html\r\n")
-        connectionSocket.send(b"r\n")
+        connectionSocket.send(b"\r\n")
         connectionSocket.send(b"<h1> 404 Not Found </h1>")
 
     finally:
